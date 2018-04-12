@@ -19,7 +19,7 @@ const withCache = (func, logger = console) => {
 const withResultLogging = (func, logger = console) => {
     return (...args) => {
         const result = func(...args);
-        logger.log(`Function: ${func.name} Result: ${result || 'void'}`);
+        logger.log(`Function: ${func.name || 'anonymous'} Result: ${result || 'void'}`);
 
         return result;
     }
@@ -32,7 +32,7 @@ const withTimeMetrick = (func, logger = console) => {
         const startTime = process.hrtime();
         const result = func(...args);
         const diff = process.hrtime(startTime);
-        logger.log(`Function: ${func.name} Execution time:  ${diff[0] * NS_PER_SEC + diff[1]}`);
+        logger.log(`Function: ${func.name || 'anonymous'} Execution time:  ${diff[0] * NS_PER_SEC + diff[1]}`);
 
         return result;
     }
