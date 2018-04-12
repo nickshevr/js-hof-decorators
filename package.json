@@ -1,0 +1,16 @@
+{
+  "name": "js-hof-decorators",
+  "version": "0.0.1",
+  "description": "Example of decoration pattern with HOF",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "NODE_PATH=./ jasmine"
+  },
+  "author": "nickshevr",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  }
+}
